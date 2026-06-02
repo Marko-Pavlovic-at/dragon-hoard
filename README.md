@@ -7,7 +7,7 @@ You're a treasure hunter raiding a dragon's hoard. Each roll grabs some gold int
 **Bank** the pot (it's safely yours), or **Push** your luck and roll again. Roll a
 **dragon** and you lose the whole pot. How rich can you get before you bottle it?
 
-This is a **consolidation project** — its job is *not* to teach you something new. It's to
+This is a **consolidation project** — its job is _not_ to teach you something new. It's to
 prove to yourself that you can take the things you've already nailed — state, a render
 function, `if/else`, random, parameters — and **combine them into a working game on your
 own**. That's the exact muscle the next rungs need.
@@ -18,8 +18,8 @@ own**. That's the exact muscle the next rungs need.
 
 - **MVP = only skills you already know.** Shipping the MVP = **done**. Aim to build it **solo**.
 - **Bonus = ONE new concept.** Optional. That's where you grow by one and where I help.
-- **Rhythm:** build a *whole feature* before showing me — bring *"here's my attempt and
-  where it broke,"* not *"what's step 2?"* I'm your reviewer, not your steering wheel.
+- **Rhythm:** build a _whole feature_ before showing me — bring _"here's my attempt and
+  where it broke,"_ not _"what's step 2?"_ I'm your reviewer, not your steering wheel.
 - **Last step:** deploy it + put the live link in this README.
 
 ---
@@ -40,16 +40,17 @@ By the end you should have, **on your own**:
 
 Build it as a small web page (`index.html` + `style.css` + `main.js`), same shape as always.
 
-- [ ] A **"Roll"** button that adds a random amount of gold to your **pot** and shows it.
-- [ ] After a roll, the player can **Bank** (pot is added to **total gold**, pot resets to 0)
+- [x] A **"Roll"** button that adds a random amount of gold to your **pot** and shows it.
+- [x] After a roll, the player can **Bank** (pot is added to **total gold**, pot resets to 0)
       **or** keep rolling.
-- [ ] Some rolls are a **dragon** — rolling one **busts the pot** (pot → 0, run over), but
+- [x] Some rolls are a **dragon** — rolling one **busts the pot** (pot → 0, run over), but
       your already-banked total is safe.
 - [ ] Show **pot**, **total gold**, and **best single run** on the page, always accurate.
 - [ ] A **"New Run / Reset"** that clears the pot and lets you play again (your call whether
       reset also wipes total gold or just the current run).
 
 ### Definition of done
+
 You can play run after run: roll, decide to bank or push, sometimes bust, and the pot /
 total / best numbers are always right. Then it's deployed with a live link below.
 
@@ -58,22 +59,23 @@ total / best numbers are always right. Then it's deployed with a live link below
 ## Plan it in plain English first
 
 Before any code, write your steps as comments (this habit saves you every time):
+
 1. What happens when I click **Roll**? (random number → add to pot → render)
 2. What decides a **bust**? (e.g. a roll of 1 = dragon, or a random chance)
 3. What does **Bank** do to the numbers?
 4. When does **best run** update?
-Then build it **one piece at a time** — get Roll working before you touch Bank.
+   Then build it **one piece at a time** — get Roll working before you touch Bank.
 
 ---
 
 ## The ONE new concept (optional bonus)
 
 Add a **run history log** on the page — a list that records each round, like
-*"Rolled 7 (pot 7)"*, *"Banked 24!"*, *"🐉 Busted!"*.
+_"Rolled 7 (pot 7)"_, _"Banked 24!"_, _"🐉 Busted!"_.
 
 The new skill: instead of building HTML with `innerHTML = "..."` strings, build each line
 with **`document.createElement`** and **`append`**. You make an element in JS, set its text,
-and attach it to the list. It feels clunky at first, but it's the *clean* way to build the
+and attach it to the list. It feels clunky at first, but it's the _clean_ way to build the
 DOM — and it's exactly the technique the next project (and Quest Log) is built on. So this
 bonus is a real head start.
 
@@ -105,6 +107,7 @@ I'll respond with questions and the smallest hint to get you unstuck — not the
 ---
 
 ## Ship it 🚀
+
 When the MVP works, deploy it (see `../git-manual/README.md`) and drop the link here:
 
 **Live:** _(add your GitHub Pages link)_
