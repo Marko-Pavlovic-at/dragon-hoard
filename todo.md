@@ -15,4 +15,7 @@ runrender function:
 
 IF user rolls gold and not dragon add one to the run and display it to the html DONE and works
 IF user rolls dragon run gets reset to 0 DONE and works
-on the dragon part save the best run and only change it if there is a higher run
+on the dragon part save the best run and only change it if there is a higher run DONE and works
+
+reset function:
+write a function that resets gold and bank and run but keeps the best run

@@ -5,6 +5,7 @@ const bagDisplay = document.querySelector("#bagDisplay");
 const logDisplay = document.querySelector("#logDisplay");
 const currentRunDisplay = document.querySelector("#currentRunDisplay");
 const bestRunDisplay = document.querySelector("#bestRunDisplay");
+const resetBtn = document.querySelector("#resetBtn");
 
 let bag = 0;
 let bank = 0;
@@ -14,6 +15,10 @@ let bestRun = 0;
 //rollGold();
 //console.log(bag); tested works
 
+resetBtn.addEventListener("click", (e) => {
+  reset();
+});
+
 treasureBtn.addEventListener("click", (e) => {
   rollEncounter();
   runRender();
@@ -22,6 +27,16 @@ treasureBtn.addEventListener("click", (e) => {
 bankBtn.addEventListener("click", (e) => {
   bankGold();
 });
+
+function reset() {
+  bag = 0;
+  bank = 0;
+  run = 0;
+  currentRunDisplay.textContent = "";
+  logDisplay.textContent = "";
+  bagDisplay.textContent = "";
+  bankDisplay.textContent = "";
+}
 
 function runRender() {
   if (lost === false) {
