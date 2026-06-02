@@ -3,20 +3,40 @@ const bankBtn = document.querySelector("#bankBtn");
 const bankDisplay = document.querySelector("#bankDisplay");
 const bagDisplay = document.querySelector("#bagDisplay");
 const logDisplay = document.querySelector("#logDisplay");
+const currentRunDisplay = document.querySelector("#currentRunDisplay");
+const bestRunDisplay = document.querySelector("#bestRunDisplay");
 
 let bag = 0;
 let bank = 0;
-let lost;
+let lost = false;
+let run = 0;
+let bestRun = 0;
 //rollGold();
 //console.log(bag); tested works
 
 treasureBtn.addEventListener("click", (e) => {
   rollEncounter();
+  runRender();
 });
 
 bankBtn.addEventListener("click", (e) => {
   bankGold();
 });
+
+function runRender() {
+  if (lost === false) {
+    run = run + 1;
+    currentRunDisplay.innerHTML = `Current run: ${run}`;
+  } else if (lost === true) {
+    if (run > bestRun) {
+      bestRun = run;
+      bestRunDisplay.innerHTML = `Best run: ${bestRun}`;
+    } else if (bestRun > run) {
+      bestRun = bestRun;
+    }
+    run = 0;
+  }
+}
 
 function bankGold() {
   bank = bank + bag;
